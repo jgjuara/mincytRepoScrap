@@ -35,6 +35,7 @@ titles <- unlist(titles) %>%
     str_trim()
 #transformo lista a matriz con las columnas de autores, fecha e idioma
 extra <- unlist(extra) %>% 
+    str_trim() %>% 
     matrix(ncol = 3, byrow = T, dimnames = list(NULL,c("autores", "fecha", "idioma")))
 #armo 
 resultados <- cbind(links, titles, extra) %>% 
