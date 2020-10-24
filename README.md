@@ -8,4 +8,4 @@ https://repositoriosdigitales.mincyt.gob.ar/vufind/Search/Results?filter%5B%5D=~
 Scrapendo los resultados se llega a un csv que cargué a drive a fin de visualizar el ejemplo:
 https://docs.google.com/spreadsheets/d/1T512CRsHZ7OfTxH2tPIf5pH9ycNROApGEQSt7nJaTS4/edit?usp=sharing
 
-La idea es poder exportar los resultados de busqueda y sistematizar más facilmente la revision de literatura.
+La idea es poder exportar los resultados de busqueda y sistematizar más facilmente la revision de literatura. Algún día quienes gestionan las web de los repositorios van a sumar un botoncito de "exportar búsqueda" y esto ya no será necesario.
