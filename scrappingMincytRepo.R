@@ -31,7 +31,8 @@ for (i in pages) {
 links <- unlist(links) %>% 
     paste0(home,.)
 #vectorizo los titulos
-titles <- unlist(titles)
+titles <- unlist(titles) %>% 
+    str_trim()
 #transformo lista a matriz con las columnas de autores, fecha e idioma
 extra <- unlist(extra) %>% 
     matrix(ncol = 3, byrow = T, dimnames = list(NULL,c("autores", "fecha", "idioma")))
@@ -39,4 +40,4 @@ extra <- unlist(extra) %>%
 resultados <- cbind(links, titles, extra) %>% 
     as.data.frame()
 
-write_csv(resultados, path = ".csv")
+write_csv(resultados, path = "resultados.csv")
