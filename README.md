@@ -14,7 +14,8 @@ Scrapendo los resultados se llega a un csv que tiene la forma:
 
 | Links         | Titulos       | Autores  | Fecha de Publicacion | Idioma |
 | ------------- | ------------- | -------- | -------------------- | ------ |
-| [link1](https://repositoriosdigitales.mincyt.gob.ar/vufind/Record/CONICETDig_e261125dc1aa186a1d5d7cea2567888e)  | Agonía y cierre de un ícono de la Argentina agroexportadora: el caso del Mercado Central de Frutos (1946-1976)           | Autores: Hermida, Adriel | Fecha de publicación: 2015. | Idioma: español. |
+| [link1](https://repositoriosdigitales.mincyt.gob.ar/vufind/Record/CONICETDig_e261125dc1aa186a1d5d7cea2567888e)  | Agonía y cierre de un ícono de la Argentina agroexportadora: el caso del Mercado Central de Frutos (1946-1976)           | Autores:
+                      Cuesta, Eduardo Martín | Fecha de publicación: 2015. | Idioma: español. |
                       
 Cargué a drive el csv a fin de visualizar el ejemplo completo:
 
