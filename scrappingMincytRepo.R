@@ -23,7 +23,7 @@ keysSearched <- "papa+OR+blanca+-negra"
 basicSearch <- paste0(searchUrl, paste(keysSearched, campos$todos, sep = "&"))
 
 # para busquedas complejas mejor ir al browser, armarla y copiar la url, ej:
-advancedSearch<- "https://repositoriosdigitales.mincyt.gob.ar/vufind/Search/Results?filter%5B%5D=%7Elanguage%3A%22spa%22&filter%5B%5D=%7Eeu_rights_str_mv%3A%22openAccess%22&filter%5B%5D=publishDate%3A%22%5B2000+TO+%2A%5D%22&join=AND&bool0%5B%5D=AND&lookfor0%5B%5D=desigualdad+AND+salar%2A+-salares+-salar&type0%5B%5D=AllFields&page="
+advancedSearch<- "https://repositoriosdigitales.mincyt.gob.ar/vufind/Search/Results?filter%5B%5D=~language%3A%22spa%22&filter%5B%5D=~format%3A%22article%22&filter%5B%5D=~format%3A%22workingPaper%22&filter%5B%5D=~format%3A%22report%22&filter%5B%5D=~format%3A%22bookPart%22&filter%5B%5D=~eu_rights_str_mv%3A%22openAccess%22&filter%5B%5D=~reponame_str%3A%22Biblioteca+Digital+%28UBA-FCE%29%22&filter%5B%5D=~reponame_str%3A%22CONICET+Digital+%28CONICET%29%22&filter%5B%5D=~reponame_str%3A%22Filo+Digital+%28UBA-FFyL%29%22&filter%5B%5D=~reponame_str%3A%22Memoria+Acad%C3%A9mica+%28UNLP-FAHCE%29%22&filter%5B%5D=~reponame_str%3A%22RepHipUNR+%28UNR%29%22&filter%5B%5D=~reponame_str%3A%22Repositorio+Digital+San+Andr%C3%A9s+%28UdeSa%29%22&filter%5B%5D=~reponame_str%3A%22Repositorio+Digital+Universitario+%28UNC%29%22&filter%5B%5D=~reponame_str%3A%22Repositorio+Digital+UNLaM%22&filter%5B%5D=~reponame_str%3A%22Repositorio+Institucional+%28UNSAM%29%22&filter%5B%5D=~reponame_str%3A%22RIDAA+%28UNQ%29%22&filter%5B%5D=~reponame_str%3A%22SEDICI+%28UNLP%29%22&filter%5B%5D=publishDate%3A%22%5B2000+TO+2021%5D%22&join=AND&bool0%5B%5D=AND&lookfor0%5B%5D=salar%2A&lookfor0%5B%5D=actividad%2A&type0%5B%5D=AllFields&type0%5B%5D=AllFields"
 
 # maxima cantidad de paginas de resultados a scrapear
 max <- 20
@@ -39,7 +39,7 @@ busqueda <- list(basica = basicSearch, avanzada = advancedSearch)
 # hay un if al final del loop que evita que sigas scrapeando dps del primer resultado vacío.
 # no es lo óptimo creo pero lo que tengo x ahora
 for (i in 1:max) {
-    url <- paste(busqueda$avanzada,
+    url <- paste(busqueda$avanzada, "&page=",
                  i, sep = "")
     htmlRepo <- read_html(url)
     links[i] <- htmlRepo %>% 
